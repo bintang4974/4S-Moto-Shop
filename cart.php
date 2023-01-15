@@ -110,7 +110,7 @@ if (isset($_POST['remove'])) {
                         </div>
                         <div class="form-group">
                             <label>Tanggal</label>
-                            <input type="text" name="tgl_transaksi" class="form-control" value="<?= date('d-m-Y') ?>" readonly>
+                            <input type="text" name="tgl_transaksi" class="form-control" value="<?= date('Y-m-d') ?>" readonly>
                         </div>
 
                         <button type="submit" class="btn btn-primary btn-sm">Payment</button>
