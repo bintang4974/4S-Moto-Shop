@@ -91,7 +91,7 @@ if (isset($_POST['remove'])) {
                             <h6>$<?= $total; ?></h6>
                         </div>
                     </div>
-                    <form action="" class="mb-3">
+                    <form action="proses.php" method="post" class="mb-3">
                         <div class="form-group">
                             <label>Nama Lengkap</label>
                             <input type="text" name="nama" class="form-control">
@@ -104,6 +104,15 @@ if (isset($_POST['remove'])) {
                             <label>Alamat</label>
                             <textarea name="alamat" class="form-control"></textarea>
                         </div>
+                        <div class="form-group">
+                            <label>Total</label>
+                            <input type="text" name="biaya" class="form-control" value="<?= $total ?>" readonly>
+                        </div>
+                        <div class="form-group">
+                            <label>Tanggal</label>
+                            <input type="text" name="tgl_transaksi" class="form-control" value="<?= date('d-m-Y') ?>" readonly>
+                        </div>
+
                         <button type="submit" class="btn btn-primary btn-sm">Payment</button>
                     </form>
                 </div>
