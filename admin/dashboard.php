@@ -36,7 +36,7 @@
                 } else {
                     echo "<td><b>Pembayaran Belum Dilakukan</b></td>";
                 }
-                echo "<td>" . $data['id_order'] . "</td>";
+                echo "<td>" . $data['order_id'] . "</td>";
                 echo "<td><a href='hapus.php?id=" . $data['id'] . "' class='btn btn-danger btn-sm'><i class='fas fa-trash'></i> Hapus</a></td>";
                 echo "</tr>";
             }

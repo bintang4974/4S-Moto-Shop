@@ -15,7 +15,7 @@
     <!-- Style CSS -->
     <link rel="stylesheet" href="style.css">
 
-    <title>Document</title>
+    <title>Admin</title>
 </head>
 
 <body>
@@ -27,7 +27,7 @@
             </button>
             <div class="collapse navbar-collapse" id="navbarNavAltMarkup">
                 <div class="navbar-nav">
-                    <a class="nav-link" href="dashboard.php">Home <span class="sr-only">(current)</span></a>
+                    <a class="nav-link" href="dashboard.php">Dashboard <span class="sr-only">(current)</span></a>
                     <a class="nav-link" href="produk.php">Product</a>
                     <a class="nav-link" href="#">User</a>
                     <a class="nav-link">Logout</a>
