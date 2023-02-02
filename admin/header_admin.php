@@ -1,3 +1,10 @@
+<?php
+session_start();
+if ($_SESSION['status'] != "login") {
+    header("location:login.php?pesan=belum_login");
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -21,7 +28,7 @@
 <body>
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
         <div class="container">
-            <a class="navbar-brand" href="#">Bintank</a>
+            <a class="navbar-brand" href="#"><?= $_SESSION['username']; ?></a>
             <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavAltMarkup" aria-controls="navbarNavAltMarkup" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -30,7 +37,7 @@
                     <a class="nav-link" href="dashboard.php">Dashboard <span class="sr-only">(current)</span></a>
                     <a class="nav-link" href="produk.php">Product</a>
                     <a class="nav-link" href="#">User</a>
-                    <a class="nav-link">Logout</a>
+                    <a class="nav-link" href="logout.php">Logout</a>
                 </div>
             </div>
         </div>

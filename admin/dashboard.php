@@ -1,5 +1,14 @@
 <?php include "header_admin.php" ?>
 
+<?php
+// session_start();
+if ($_SESSION['status'] != "login") {
+    header("location:login.php?pesan=belum_login");
+}
+?>
+
+<!-- <h4>Selamat datang, <?php echo $_SESSION['username']; ?>! anda telah login.</h4> -->
+
 <div class="container my-5">
     <h3>Data Pembayaran</h3>
     <table class="table table-striped table-bordered table-hover mt-3">
