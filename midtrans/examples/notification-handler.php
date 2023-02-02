@@ -42,8 +42,7 @@ if ($transaction == 'capture') {
 } else if ($transaction == 'settlement') {
     // TODO set payment status in merchant's database to 'Settlement'
     include "../../admin/koneksi.php";
-    mysqli_query($koneksi, "UPDATE transaksi SET status_transaksi='3', 
-    transaction_id='$transaction_id' WHERE order_id='$order_id'");
+    mysqli_query($koneksi, "UPDATE transaksi SET status_transaksi='3'");
     echo "Transaction order_id: " . $order_id . " successfully transfered using " . $type;
 } else if ($transaction == 'pending') {
     // TODO set payment status in merchant's database to 'Pending'

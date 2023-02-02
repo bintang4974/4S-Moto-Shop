@@ -30,11 +30,11 @@
                 echo "<td>" . $data['alamat'] . "</td>";
                 echo "<td>" . $data['tgl_transaksi'] . "</td>";
                 if ($status >= 3) {
-                    echo "<td><b>Pembayaran Sukses</b></td>";
+                    echo "<td><span class='badge badge-success'>Pembayaran Sukses</span></td>";
                 } else if ($status >= 2) {
-                    echo "<td><b>Pembayaran Pending</b></td>";
+                    echo "<td><span class='badge badge-warning'>Pembayaran Pending</span></td>";
                 } else {
-                    echo "<td><b>Pembayaran Belum Dilakukan</b></td>";
+                    echo "<td><span class='badge badge-danger'>Pembayaran Belum Dilakukan</span></td>";
                 }
                 echo "<td>" . $data['order_id'] . "</td>";
                 echo "<td><a href='hapus.php?id=" . $data['id'] . "' class='btn btn-danger btn-sm'><i class='fas fa-trash'></i> Hapus</a></td>";

@@ -1,17 +1,16 @@
 <?php
-include "koneksi.php";
+include 'koneksi.php';
+$id = $_GET["id"];
+//mengambil id yang ingin dihapus
 
-$id = $_GET['id'];
+//jalankan query DELETE untuk menghapus data
+$query = "DELETE FROM product WHERE id='$id' ";
+$hasil_query = mysqli_query($koneksi, $query);
 
-$query = "SELECT * FROM product WHERE id='$id'";
-$sql = mysqli_query($koneksi, $query);
-$data = mysqli_fetch_array($sql);
-
-$query2 = "DELETE FROM product WHERE id='$id'";
-$sql2 = mysqli_query($koneksi, $query2);
-
-if ($sql2) {
-    header("location: produk.php");
+//periksa query, apakah ada kesalahan
+if (!$hasil_query) {
+    die("Gagal menghapus data: " . mysqli_errno($koneksi) .
+        " - " . mysqli_error($koneksi));
 } else {
-    echo "gagal delete";
+    echo "<script>alert('Data berhasil dihapus.');window.location='produk.php';</script>";
 }
