@@ -36,7 +36,7 @@ if ($_SESSION['status'] != "login") {
                 <div class="navbar-nav">
                     <a class="nav-link" href="dashboard.php">Dashboard <span class="sr-only">(current)</span></a>
                     <a class="nav-link" href="produk.php">Product</a>
-                    <a class="nav-link" href="#">User</a>
+                    <a class="nav-link" href="user.php">User</a>
                     <a class="nav-link" href="logout.php">Logout</a>
                 </div>
             </div>

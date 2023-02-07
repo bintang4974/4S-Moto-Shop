@@ -42,17 +42,17 @@ if ($transaction == 'capture') {
 } else if ($transaction == 'settlement') {
     // TODO set payment status in merchant's database to 'Settlement'
     include "../../admin/koneksi.php";
-    mysqli_query($koneksi, "UPDATE transaksi SET status_transaksi='3'");
+    mysqli_query($koneksi, "UPDATE transaksi SET status_transaksi='3', transaction_id='$transaction_id' WHERE order_id='$order_id'");
     echo "Transaction order_id: " . $order_id . " successfully transfered using " . $type;
 } else if ($transaction == 'pending') {
     // TODO set payment status in merchant's database to 'Pending'
     include "../../admin/koneksi.php";
-    mysqli_query($koneksi, "UPDATE transaksi SET status_transaksi='2'");
+    mysqli_query($koneksi, "UPDATE transaksi SET status_transaksi='2' WHERE order_id='$order_id'");
     echo "Waiting customer to finish transaction order_id: " . $order_id . " using " . $type;
 } else if ($transaction == 'deny') {
     // TODO set payment status in merchant's database to 'Denied'
     include "../../admin/koneksi.php";
-    mysqli_query($koneksi, "UPDATE transaksi SET status_transaksi='1'");
+    mysqli_query($koneksi, "UPDATE transaksi SET status_transaksi='1' WHERE order_id='$order_id'");
     echo "Payment using " . $type . " for transaction order_id: " . $order_id . " is denied.";
 } else if ($transaction == 'expire') {
     // TODO set payment status in merchant's database to 'expire'

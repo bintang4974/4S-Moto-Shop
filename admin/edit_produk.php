@@ -1,3 +1,5 @@
+<?php include "header_admin.php" ?>
+
 <?php
 // memanggil file koneksi.php untuk membuat koneksi
 include 'koneksi.php';
@@ -28,10 +30,8 @@ if (isset($_GET['id'])) {
 ?>
 
 
-<?php include "header_admin.php" ?>
-
 <div class="container my-5">
-    <h3 class="mb-3">Form Tambah Produk</h3>
+    <h3 class="mb-3">Form Update Produk</h3>
     <form action="proses_edit.php" method="post" enctype="multipart/form-data">
         <div class="form-group">
             <label>Nama Produk</label>

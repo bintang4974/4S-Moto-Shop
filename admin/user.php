@@ -23,9 +23,9 @@ if ($_SESSION['status'] != "login") {
         <tbody>
             <?php
             include "koneksi.php";
-            error_reporting(0); 
+            error_reporting(0);
             $no = 1;
-            $query = mysqli_query($koneksi, "SELECT * FROM product ORDER BY id ASC");
+            $query = mysqli_query($koneksi, "SELECT * FROM user ORDER BY id ASC");
             while ($data = mysqli_fetch_array($query)) {
                 $status = $data['status_transaksi'];
                 echo "<tr>";

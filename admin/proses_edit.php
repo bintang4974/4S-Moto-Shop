@@ -19,7 +19,7 @@ if ($product_image != "") {
         move_uploaded_file($file_tmp, 'gambar/' . $nama_gambar_baru); //memindah file gambar ke folder gambar
 
         // jalankan query UPDATE berdasarkan ID yang produknya kita edit
-        $query  = "UPDATE product SET product_name = '$product_name', product_price = '$product_price'";
+        $query  = "UPDATE product SET product_name = '$product_name', product_price = '$product_price', product_image = '$product_image'";
         $query .= "WHERE id = '$id'";
         $result = mysqli_query($koneksi, $query);
         // periska query apakah ada error

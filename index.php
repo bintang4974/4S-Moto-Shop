@@ -13,7 +13,7 @@ if (isset($_POST['add'])) {
     // create session cart
     if (isset($_SESSION['cart'])) {
         $item_array_id = array_column($_SESSION['cart'], "product_id");
-        print_r($item_array_id);
+        // print_r($item_array_id);
 
         // if product already added
         if (in_array($_POST['product_id'], $item_array_id)) {
@@ -29,7 +29,7 @@ if (isset($_POST['add'])) {
 
             // call session cart again with count item product
             $_SESSION['cart'][$count] = $item_array;
-            print_r($_SESSION['cart']);
+            // print_r($_SESSION['cart']);
         }
     } else {
 
@@ -39,7 +39,7 @@ if (isset($_POST['add'])) {
 
         // create new session variable
         $_SESSION['cart'][0] = $item_array;
-        print_r($_SESSION['cart']);
+        // print_r($_SESSION['cart']);
     }
 }
 ?>
